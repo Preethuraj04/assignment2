@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+<body>
+<table>
+	<tr>
+		<th>Order Number</th>
+		<th>Progit/Loss%</th>
+		<th>Transferred Amount</th>
+		<th>Total Market Place Charges</th>
+	</tr>
+	{% for i in range(mylist|length) %}
+		<tr>
+			<td>{{ mylist[i][0] }} </td>
+			<td>{{ mylist[i][1] }} </td>
+			<td>{{ mylist[i][2] }} </td>
+			<td>{{ mylist[i][3] }} </td>
+			
+		</tr>
+	{% endfor %}
+	
+</table>
+
+<p hidden>
+{{ mylist.clear() }}
+</p>
+
+</body>
+</html>
